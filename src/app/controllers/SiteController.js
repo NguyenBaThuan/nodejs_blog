@@ -4,11 +4,10 @@ class SiteController {
         res.render('home');
     }
 
-    //[GET] /Search 
+    //[GET] /Search
     Search(req, res) {
         res.render('search');
     }
 }
 
-
-module.exports = new SiteController;
+module.exports = new SiteController();
