@@ -20,13 +20,27 @@
           <button class="btn btn-primary btn-sm checkbox-all-submit-btn" disabled="disabled">Thực hiện</button>
        </div>
     </div>
+
     <table class="table mt-4">
         <thead>
             <tr>
-                <th scope="col" colspan="2">#</th>
-                <th scope="col">Tên khóa học</th>
-                <th scope="col">Trình độ</th>
-                <th scope="col" colspan="2">Thời gian tạo</th>
+                <th scope="col"></th>
+                <th scope="col">
+                   ID
+                  {{{sortable '_id' _sort}}}
+                </th>
+                <th scope="col">
+                  Tên khóa học 
+                  {{{sortable 'name' _sort}}}
+                </th>
+                <th scope="col">
+                  Trình độ
+                   {{{sortable 'level' _sort}}}
+                </th>
+                <th scope="col" colspan="2">
+                  Thời gian tạo
+                   {{{sortable 'createdAt' _sort}}}
+                  </th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +51,7 @@
                       <input class="form-check-input" name="courseIds[]" type="checkbox" value="{{this._id}}">
                   </div>
               </td>
-                <th scope="row">{{sum @index 1}}</th>
+                <th scope="row">{{this._id}}</th>
                 <td>{{this.name}}</td>
                 <td>{{this.level}}</td>
                 <td>{{this.createdAt}}</td>
